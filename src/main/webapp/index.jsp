@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2><%= " This is sample prac session . Hello World welcome to Jenkinsfile!" %></h2>
+<h2><%= "Hello World welcome to Jenkinsfile!" this file is integrated with tomcat webapp %></h2>
 </body>
 </html>
