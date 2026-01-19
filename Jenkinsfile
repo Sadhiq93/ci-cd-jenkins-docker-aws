@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 8080:8080 java-cicd-app'
+                sh 'docker run -d -p 8081:8080 java-cicd-app'
             }
         }
     }
