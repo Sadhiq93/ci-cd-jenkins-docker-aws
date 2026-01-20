@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_IMAGE = 'java-cicd-app'
+        CONTAINER_NAME = 'java-app'
+        HOST_PORT = '8081'
+        CONTAINER_PORT = '8080'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -16,17 +23,26 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t java-cicd-app .'
+                // Force rebuild to avoid using old cache
+                sh "docker build --no-cache -t ${DOCKER_IMAGE} ."
             }
         }
 
         stage('Deploy') {
             steps {
-                // Remove old container if exists
-                sh 'docker rm -f java-app || true'
-                // Run container with correct port mapping
-                sh 'docker run -d -p 8081:8080 --name java-app java-cicd-app'
+                // Stop and remove old container if it exists
+                sh "docker rm -f ${CONTAINER_NAME} || true"
+                
+                // Run new container with proper port mapping
+                sh "docker run -d -p ${HOST_PORT}:${CONTAINER_PORT} --name ${CONTAINER_NAME} ${DOCKER_IMAGE}"
             }
+        }
+    }
+
+    post {
+        always {
+            // Show running containers for verification
+            sh 'docker ps'
         }
     }
 }
