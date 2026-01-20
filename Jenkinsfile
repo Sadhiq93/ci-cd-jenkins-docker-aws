@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'java-cicd-app'
+        DOCKER_IMAGE = '0'
         CONTAINER_NAME = 'java-app'
         HOST_PORT = '8081'
         CONTAINER_PORT = '8080'
