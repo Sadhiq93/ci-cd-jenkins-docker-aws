@@ -89,7 +89,9 @@ http://<EC2-PUBLIC-IP>:8080
 
 📸 Screenshots
 
-(Add Jenkins pipeline success screenshots here)
+<img width="1029" height="548" alt="maven_build_stage" src="https://github.com/user-attachments/assets/1fd76755-de29-4d08-b592-4376e2cfb933" />
+
+
 🎯 Learning Outcomes
 
   CI/CD automation using Jenkins
