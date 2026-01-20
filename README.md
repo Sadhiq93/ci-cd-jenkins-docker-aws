@@ -91,6 +91,17 @@ http://<EC2-PUBLIC-IP>:8080
 
 <img width="1029" height="548" alt="maven_build_stage" src="https://github.com/user-attachments/assets/1fd76755-de29-4d08-b592-4376e2cfb933" />
 
+<img width="1029" height="548" alt="docker_build_stage" src="https://github.com/user-attachments/assets/249902b2-c653-4a37-8661-f4058a41e950" />
+
+<img width="1190" height="646" alt="Build_success" src="https://github.com/user-attachments/assets/b977df08-6183-4622-9c04-48d7e17575f1" />
+
+<img width="1221" height="450" alt="docker_contianer" src="https://github.com/user-attachments/assets/2ee8df20-c55e-4fa0-875d-c84fab8aa128" />
+
+<img width="986" height="107" alt="login_app" src="https://github.com/user-attachments/assets/630356f0-b4c8-40e8-a98f-4e23e75284dd" />
+
+
+
+
 
 🎯 Learning Outcomes
 
