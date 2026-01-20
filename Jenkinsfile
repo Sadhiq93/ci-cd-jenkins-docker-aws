@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = '0'
         CONTAINER_NAME = 'java-app'
-        HOST_PORT = '8081'
+        HOST_PORT = '8080'
         CONTAINER_PORT = '8080'
     }
 
