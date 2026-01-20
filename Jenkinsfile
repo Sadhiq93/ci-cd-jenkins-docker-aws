@@ -22,8 +22,12 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 8081:8080 java-cicd-app'
+                // Remove old container if exists
+                sh 'docker rm -f java-app || true'
+                // Run container with correct port mapping
+                sh 'docker run -d -p 8081:8080 --name java-app java-cicd-app'
             }
         }
     }
 }
+
