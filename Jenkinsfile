@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = '0'
+        DOCKER_IMAGE = 'java-cicd-app'
         CONTAINER_NAME = 'java-app'
-        HOST_PORT = '8080'
-        CONTAINER_PORT = '8080'
+        HOST_PORT = '8081'       // Port on your server
+        CONTAINER_PORT = '8080'  // Port Tomcat listens inside the container
     }
 
     stages {
